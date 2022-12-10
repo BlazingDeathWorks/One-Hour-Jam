@@ -7,8 +7,8 @@ public class Score : MonoBehaviour
 {
     public int totalScore;
 
-    public float time;
-    public float score;
+    private float time;
+    private float score;
 
     public TextMeshProUGUI scoreText;
 
@@ -26,5 +26,10 @@ public class Score : MonoBehaviour
         totalScore = (int)time + (int)score;
 
         scoreText.text = totalScore.ToString();
+    }
+
+    public void ScorePlus(float plus)
+    {
+        score += plus;
     }
 }
