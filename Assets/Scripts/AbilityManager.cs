@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class AbilityManager : MonoBehaviour
 {
-    public static AbilityManager Instance { get; private set; }
-    public Ability Powerup { private get; set; } = null;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            return;
-        }
-        Destroy(gameObject);
-    }
+    [SerializeField] private Ability[] _abilities;
+    [SerializeField] private float _spawnRate = 1;
+    private float _timeSinceLastSpawned = 0;
 
     private void Update()
     {
-        if (Powerup == null) return;
+        if (_abilities.Length <= 0) return;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        _timeSinceLastSpawned += Time.deltaTime;
+        if (_timeSinceLastSpawned >= _spawnRate)
         {
-            Powerup.Unleash();
+            _timeSinceLastSpawned = 0;
+            Instantiate(_abilities[Random.Range(0, _abilities.Length)], transform.position, Quaternion.identity);
         }
     }
 }
