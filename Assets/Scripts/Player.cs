@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Score scoreScript;
+
     public bool dead;
 
     void Start()
@@ -20,11 +22,17 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(mousePos.x, mousePos.y, 0f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             dead = true;
+        }
+
+        if (collision.gameObject.tag == "Score Plus")
+        {
+            ScorePlus scoreplus = collision.GetComponent<ScorePlus>();
+            scoreScript.ScorePlus(scoreplus.plusPower);
         }
     }
 }

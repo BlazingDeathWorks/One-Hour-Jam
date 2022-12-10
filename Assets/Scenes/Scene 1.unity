@@ -233,23 +233,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 99
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_SizeDelta.y
@@ -257,11 +257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 49.5
+      value: -1003.8
       objectReference: {fileID: 0}
     - target: {fileID: 191656491128599692, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: -441.95
       objectReference: {fileID: 0}
     - target: {fileID: 1481742491515761647, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_Name
@@ -555,6 +555,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8079959747631457707, guid: e825bb35c9c5b494e83677379b1b580f, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079959747631457707, guid: e825bb35c9c5b494e83677379b1b580f, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
