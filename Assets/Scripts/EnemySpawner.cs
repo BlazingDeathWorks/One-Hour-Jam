@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private Enemy _enemy;
+    [SerializeField] private Enemy[] _enemies;
     //Rotation Enemy should be facing when going straight relative to the spawner
     [SerializeField] private float _straightAngle;
     //This will be plus minus variation from striaght angle
@@ -19,12 +19,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (_enemy == null) return;
+        if (_enemies.Length <= 0) return;
 
         _timeSinceLastSpawned += Time.deltaTime;
         if (_timeSinceLastSpawned >= _spawnRate)
         {
-            Transform enemyTransform = Instantiate(_enemy, transform.position, Quaternion.identity).transform;
+            Transform enemyTransform = Instantiate(_enemies[Random.Range(0, _enemies.Length)], transform.position, Quaternion.identity).transform;
             enemyTransform.localEulerAngles = new Vector3(0, 0, _straightAngle + Random.Range(-_angleVariationRange, _angleVariationRange));
             enemyTransform.parent = transform;
             _timeSinceLastSpawned = 0;
