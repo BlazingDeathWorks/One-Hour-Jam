@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 2219264803986544550, guid: e5ff5b1586e626b45b8c4c58db2463ed, type: 3}
   _straightAngle: 0
-  _angleVariationRange: 0
+  _angleVariationRange: 30
   _spawnRate: 1

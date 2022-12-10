@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(transform.right * _speed * Time.deltaTime);
+        transform.Translate(transform.up * _speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
