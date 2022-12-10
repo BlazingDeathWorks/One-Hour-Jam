@@ -301,11 +301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1868366541330377606, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115.8
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 1868366541330377606, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 21.3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3119403708107015735, guid: 97ea1ae6cbcc3804385983f576635df3, type: 3}
       propertyPath: m_RootOrder
