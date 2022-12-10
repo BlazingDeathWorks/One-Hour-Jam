@@ -26,7 +26,6 @@ public class EnemySpawner : MonoBehaviour
         {
             Transform enemyTransform = Instantiate(_enemy, transform.position, Quaternion.identity).transform;
             enemyTransform.localEulerAngles = new Vector3(0, 0, _straightAngle + Random.Range(-_angleVariationRange, _angleVariationRange));
-            enemyTransform.parent = transform;
             _timeSinceLastSpawned = 0;
         }
     }

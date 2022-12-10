@@ -10,4 +10,12 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(transform.right * _speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("PLAYER DEAD");
+        }
+    }
 }

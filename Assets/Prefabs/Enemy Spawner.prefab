@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a51066bcb7a90345bcfde5b397245ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemy: {fileID: 2219264803986544550, guid: e5ff5b1586e626b45b8c4c58db2463ed, type: 3}
+  _straightAngle: 0
+  _angleVariationRange: 0
+  _spawnRate: 1
