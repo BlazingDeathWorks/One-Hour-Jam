@@ -6,11 +6,12 @@ public abstract class Ability : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ability"))
+        if (collision.CompareTag("Player"))
         {
-            AbilityManager.Instance.Powerup = this;
+            Unleash();
+            Destroy(gameObject);
         }
     }
 
-    public abstract void Unleash();
+    protected abstract void Unleash();
 }
