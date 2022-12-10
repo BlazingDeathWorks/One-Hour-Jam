@@ -446,7 +446,7 @@ MonoBehaviour:
   - {fileID: 4419540043894019953, guid: c089d3f94d5e07e49a3a286d69be28b7, type: 3}
   - {fileID: 9017633276227817960, guid: 696dd28e5dc429244809cc9179f9a7e6, type: 3}
   - {fileID: 8885437217677683553, guid: 27afb34291356d74095b0c81d202883a, type: 3}
-  spawnRange: {x: 10, y: 5}
+  spawnRange: {x: 9, y: 5}
   spawnSpeed: 5
 --- !u!114 &1498536894 stripped
 MonoBehaviour:
