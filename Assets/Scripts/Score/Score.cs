@@ -5,23 +5,35 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    public static Score Instance;
+
+    public Player player;
+
     public int totalScore;
 
     private float time;
     private float score;
 
-    public TextMeshProUGUI scoreText;
+    public TextMeshPro scoreText;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            return;
+        }
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        if (player.dead == false)
+        {
+            time += Time.deltaTime;
+        }
 
         totalScore = (int)time + (int)score;
 

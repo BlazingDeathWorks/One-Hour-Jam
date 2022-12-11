@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -13,12 +14,11 @@ public class Player : MonoBehaviour
     public AudioClip soundA;
     public AudioClip soundB;
 
-    void Start()
+    void Awake()
     {
         dead = false;
 
-        /*Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;*/
+        scoreScript.totalScore = 0;
     }
 
     // Update is called once per frame
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
         {
             dead = true;
             audioSource.PlayOneShot(soundB);
+            OnDeath();
         }
 
         if (collision.gameObject.tag == "Score Plus")
@@ -43,5 +44,10 @@ public class Player : MonoBehaviour
             scoreScript.ScorePlus(scoreplus.plusPower);
             audioSource.PlayOneShot(soundA);
         }
+    }
+
+    void OnDeath()
+    {
+        SceneManager.LoadScene(2);
     }
 }

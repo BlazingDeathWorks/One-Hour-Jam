@@ -10,12 +10,4 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(transform.up * _speed * Time.deltaTime);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            SceneControl.Instance.LoadScene("Game Over");
-        }
-    }
 }
