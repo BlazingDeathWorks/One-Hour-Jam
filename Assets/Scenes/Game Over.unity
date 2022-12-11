@@ -171,12 +171,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -191,8 +191,8 @@ Canvas:
   m_GameObject: {fileID: 80220799}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1434451354}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -532,8 +532,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 0, y: -210}
+  m_SizeDelta: {x: 340.18, y: 70.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345650537
 MonoBehaviour:
@@ -697,6 +697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca190d0cf5d4d649a203f08be79e8b3, type: 3}
+--- !u!20 &1434451354 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8086360401175809232, guid: 7ca190d0cf5d4d649a203f08be79e8b3, type: 3}
+  m_PrefabInstance: {fileID: 1434451353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767919680
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,8 +968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -75}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 0, y: -91}
+  m_SizeDelta: {x: 340.18, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088236921
 MonoBehaviour:
