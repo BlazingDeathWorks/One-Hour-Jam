@@ -42,7 +42,6 @@ public class PlayerAbilityManager : MonoBehaviour
     public void HidePlayerColliderWithEnemy(float length)
     {
         _player.layer = LayerMask.NameToLayer(NO_ENEMY_COLLIDER_LAYER);
-        Debug.Log(_player.layer);
         StartCoroutine(ReturnPlayerColliderWithEnemy(length));
     }
 }
