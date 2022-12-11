@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("PLAYER DEAD");
+            SceneControl.Instance.LoadScene("Game Over");
         }
     }
 }
