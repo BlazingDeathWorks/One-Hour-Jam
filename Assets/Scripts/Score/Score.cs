@@ -6,10 +6,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public static Score Instance;
-
-    public Player player;
-
-    public int totalScore;
+    public int TotalScore { get; set; }
 
     private float time;
     private float score;
@@ -21,7 +18,6 @@ public class Score : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             return;
         }
         Destroy(gameObject);
@@ -30,14 +26,11 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.dead == false)
-        {
-            time += Time.deltaTime;
-        }
+        time += Time.deltaTime;
 
-        totalScore = (int)time + (int)score;
+        TotalScore = (int)time + (int)score;
 
-        scoreText.text = totalScore.ToString();
+        scoreText.text = TotalScore.ToString();
     }
 
     public void ScorePlus(float plus)

@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     {
         dead = false;
 
-        scoreScript.totalScore = 0;
+        scoreScript.TotalScore = 0;
     }
 
     // Update is called once per frame
@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
 
     void OnDeath()
     {
+        GameManager.Instance.UpdateScore();
         SceneManager.LoadScene(2);
     }
 }
