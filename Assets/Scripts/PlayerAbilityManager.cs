@@ -1,12 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FutureInspireGames.Singleton;
 
-public class PlayerAbilityManager : SingletonPersistent<PlayerAbilityManager>
+public class PlayerAbilityManager : MonoBehaviour
 {
+    public static PlayerAbilityManager Instance;
     [SerializeField] private GameObject _player;
     private const string NO_ENEMY_COLLIDER_LAYER = "Player";
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            return;
+        }
+        Destroy(gameObject);
+    }
 
     private IEnumerator ReturnPlayerSize(float length, float originalValue)
     {
