@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AbilityManager : MonoBehaviour
 {
+    [SerializeField] private Vector2 _xMinMaxRange;
+    [SerializeField] private Vector2 _yMinMaxRange;
     [SerializeField] private Ability[] _abilities;
     [SerializeField] private float _spawnRate = 1;
     private float _timeSinceLastSpawned = 0;
