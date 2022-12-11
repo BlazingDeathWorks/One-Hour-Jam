@@ -9,6 +9,10 @@ public class Player : MonoBehaviour
 
     public bool dead;
 
+    public AudioSource audioSource;
+    public AudioClip soundA;
+    public AudioClip soundB;
+
     void Start()
     {
         dead = false;
@@ -30,12 +34,14 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             dead = true;
+            audioSource.PlayOneShot(soundB);
         }
 
         if (collision.gameObject.tag == "Score Plus")
         {
             ScorePlus scoreplus = collision.GetComponent<ScorePlus>();
             scoreScript.ScorePlus(scoreplus.plusPower);
+            audioSource.PlayOneShot(soundA);
         }
     }
 }

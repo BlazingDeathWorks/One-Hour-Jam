@@ -1,20 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance;
+    public AudioSource audioSource;
+    public AudioClip sound;
 
-    void Awake() //Singleton
+    public void Sound()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            return; //Goes straight to next method
-        }
-        Destroy(gameObject);
+        audioSource.PlayOneShot(sound);
     }
 }
