@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeScale: 0.3
-  _slowRate: 3
+  _slowRate: 5
 --- !u!212 &3844597398718829423
 SpriteRenderer:
   m_ObjectHideFlags: 0

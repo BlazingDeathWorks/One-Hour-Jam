@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shrinkScale: 0.45
-  _shrinkRate: 5
+  _shrinkRate: 8

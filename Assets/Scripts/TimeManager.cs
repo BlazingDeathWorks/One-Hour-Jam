@@ -16,7 +16,6 @@ public class TimeManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             return;
         }
         Destroy(gameObject);
