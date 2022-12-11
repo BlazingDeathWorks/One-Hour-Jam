@@ -50,4 +50,4 @@ MonoBehaviour:
   - {fileID: 6642500925563313142, guid: 94b8f43c58d31ab4f8aab32dba17f0e6, type: 3}
   - {fileID: 4375351160653611018, guid: 886b1a057673fa34b9f970ef2344a3c7, type: 3}
   - {fileID: 5423402299993018545, guid: c921ad880a43f66488510fae81c37d9a, type: 3}
-  _spawnRate: 10
+  _spawnRate: 30
