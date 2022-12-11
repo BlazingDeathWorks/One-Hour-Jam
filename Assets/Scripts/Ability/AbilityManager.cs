@@ -18,7 +18,7 @@ public class AbilityManager : MonoBehaviour
         if (_timeSinceLastSpawned >= _spawnRate)
         {
             _timeSinceLastSpawned = 0;
-            Instantiate(_abilities[Random.Range(0, _abilities.Length)], transform.position, Quaternion.identity);
+            Instantiate(_abilities[Random.Range(0, _abilities.Length)], new Vector3(Random.Range(_xMinMaxRange.x, _xMinMaxRange.y), Random.Range(_yMinMaxRange.x, _yMinMaxRange.y)), Quaternion.identity);
         }
     }
 }
